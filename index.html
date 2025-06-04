@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="contacto.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h1>Bienvenido</h1>
+      <p>Si quiere regresar a la pagina principal presione aqui</p>
+      <a href="#" class="btn-login">Inicio</a>
+    </div>
+
+    <div class="right-panel">
+      <h2>Formulario</h2>
+      <p>Completa el siguiente por favor</p>
+      <form id="formulario">
+        <input type="text" placeholder="Nombre completo" name="nombre" required>
+        <input type="text" placeholder="Carrera" name="carrera" required>
+        <input type="tel" placeholder="Matricula" name="celular" required>
+        <input type="email" placeholder="Correo electrónico" name="correo" required>
+
+        <label>Califica la página, por favor.</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="cursos" value="prompts"> Muy satisfactorio</label>
+          <label><input type="checkbox" name="cursos" value="python"> Satisfactorio</label>
+          <label><input type="checkbox" name="cursos" value="ml"> Parcialmente satisfactorio</label>
+          <label><input type="checkbox" name="cursos" value="rn"> No satisfactorio</label>
+        </div>
+
+        <textarea placeholder="Dudas o comentarios" name="comentarios" rows="3"></textarea>
+
+        <div class="buttons">
+          <button type="reset" class="btn-secondary">Borrar</button>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script para mostrar alerta -->
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      e.preventDefault(); // evita que se envíe el formulario de forma tradicional
+      alert('Muchas gracias');
+      this.reset(); // opcional: limpia el formulario después de enviar
+    });
+  </script>
+</body>
+</html>
